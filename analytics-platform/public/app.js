@@ -79,7 +79,7 @@ qs("controls").addEventListener("submit", async (e) => {
     renderMetrics(metrics.metrics);
     renderChart(chartType, labels, values, field);
 
-    setStatus(`Done ✅ Points: ${points.length}`);
+    setStatus(`Done! Points: ${points.length}`);
   } catch (err) {
     setStatus(err.message, true);
     renderMetrics({ avg: null, min: null, max: null, stdDev: null, count: null });

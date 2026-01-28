@@ -35,7 +35,6 @@ function parseDateRange(startStr, endStr) {
   return { start, end };
 }
 
-// ✅ GET /api/measurements?field=field1&start_date=YYYY-MM-DD&end_date=YYYY-MM-DD&page=1&limit=200
 router.get("/", async (req, res, next) => {
   try {
     const { field, start_date, end_date } = req.query;
@@ -75,7 +74,6 @@ router.get("/", async (req, res, next) => {
   }
 });
 
-// ✅ GET /api/measurements/metrics?field=field2&start_date=...&end_date=...
 router.get("/metrics", async (req, res, next) => {
   try {
     const { field, start_date, end_date } = req.query;

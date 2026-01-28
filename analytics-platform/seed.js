@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 const Measurement = require("./models/Measurement");
 
@@ -16,7 +17,6 @@ function rand(min, max) {
   const now = new Date();
   const docs = [];
 
-  // каждые 30 минут за 7 дней
   const points = 7 * 24 * 2;
 
   for (let i = points; i >= 0; i--) {

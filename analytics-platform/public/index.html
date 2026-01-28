@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Analytics Platform</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>📈 MongoDB Time-Series Analytics</h1>
+
+    <form id="controls">
+      <label>
+        Field:
+        <select id="field">
+          <option value="field1">field1</option>
+          <option value="field2">field2</option>
+          <option value="field3">field3</option>
+        </select>
+      </label>
+
+      <label>
+        Start date:
+        <input id="start_date" type="date" />
+      </label>
+
+      <label>
+        End date:
+        <input id="end_date" type="date" />
+      </label>
+
+      <label>
+        Chart type:
+        <select id="chartType">
+          <option value="line">Line</option>
+          <option value="bar">Bar</option>
+        </select>
+      </label>
+
+      <button type="submit">Analyze</button>
+    </form>
+
+    <div id="status" class="status"></div>
+
+    <div class="cards">
+      <div class="card"><div class="k">AVG</div><div class="v" id="avg">—</div></div>
+      <div class="card"><div class="k">MIN</div><div class="v" id="min">—</div></div>
+      <div class="card"><div class="k">MAX</div><div class="v" id="max">—</div></div>
+      <div class="card"><div class="k">STD DEV</div><div class="v" id="stdDev">—</div></div>
+      <div class="card"><div class="k">COUNT</div><div class="v" id="count">—</div></div>
+    </div>
+
+    <div class="chartWrap">
+      <canvas id="chart"></canvas>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

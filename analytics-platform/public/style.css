@@ -1,0 +1,19 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #0b0f17; color: #e8eefc; }
+.container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+h1 { margin: 0 0 16px; }
+form { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; align-items: end; margin-bottom: 12px; }
+label { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+input, select, button { padding: 10px; border-radius: 10px; border: 1px solid #233; background: #111a2b; color: #e8eefc; }
+button { cursor: pointer; font-weight: 700; }
+.status { margin: 10px 0 14px; padding: 10px; border-radius: 10px; }
+.status.ok { background: rgba(0, 200, 120, 0.12); border: 1px solid rgba(0, 200, 120, 0.25); }
+.status.err { background: rgba(255, 80, 80, 0.12); border: 1px solid rgba(255, 80, 80, 0.25); }
+.cards { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; margin-bottom: 14px; }
+.card { background: #101a2d; border: 1px solid #233; border-radius: 14px; padding: 12px; }
+.k { opacity: .7; font-size: 12px; }
+.v { font-size: 22px; font-weight: 800; margin-top: 6px; }
+.chartWrap { background: #101a2d; border: 1px solid #233; border-radius: 14px; padding: 12px; }
+@media (max-width: 900px) {
+  form { grid-template-columns: 1fr; }
+  .cards { grid-template-columns: 1fr 1fr; }
+}
